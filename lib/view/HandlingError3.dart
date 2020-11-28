@@ -22,6 +22,24 @@ class _HandlingError3State extends State<HandlingError3> {
   }
 
 
+  void _showDialog(){
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: Text("Email kamu"),
+        content: Text(email.text),
+        actions: [
+          FlatButton(
+            onPressed: (){
+              Navigator.of(context).pop();
+            },
+            child: Text("Ok"),
+          )
+        ],
+      )
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -52,7 +70,7 @@ class _HandlingError3State extends State<HandlingError3> {
                   child: FlatButton(
                     color: Colors.blue,
                     onPressed: () {
-                      _formkey.currentState.validate();
+                      if(_formkey.currentState.validate()) _showDialog();
                     },
                     child:
                         Text("Submit", style: TextStyle(color: Colors.white)),
