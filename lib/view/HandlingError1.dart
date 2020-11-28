@@ -56,7 +56,7 @@ class _HandlingError1State extends State<HandlingError1> {
                   decoration: InputDecoration(
                       labelText: "Nama",
                       border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10))),
+                          borderRadius: BorderRadius.circular(5))),
                 ),
               ),
               Padding(

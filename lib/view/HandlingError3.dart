@@ -53,6 +53,7 @@ class _HandlingError3State extends State<HandlingError3> {
             children: [
               TextFormField(
                 decoration: InputDecoration(labelText: "Email",
+                prefixIcon: Icon(Icons.email),
                 suffixIcon: IconButton(
                   onPressed: (){
                     setState(() {
